@@ -6,6 +6,13 @@ writes the copy, finds the photos and builds a gallery of finished posts you can
 
 Created by **Yahaya Muhammad**.
 
+## Watch the demo
+
+[![Watch the demo: from a one-line brief to a finished set of launch posts](docs/demo.jpg)](https://github.com/kmcdotninja/social-post-designer/releases/download/demo/social-post-designer-demo.mp4)
+
+Seven minutes, from installing the skill to a gallery of finished launch posts.
+[Download the video (73 MB)](https://github.com/kmcdotninja/social-post-designer/releases/download/demo/social-post-designer-demo.mp4)
+
 ## Why it exists
 
 I was working on my own projects and kept designing post after post by hand: launch countdowns, service posts,

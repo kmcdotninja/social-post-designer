@@ -1,0 +1,108 @@
+/* The base family (layouts/base.js). */
+/* ── hero ── */
+.hero-h { position: absolute; top: 262px; left: var(--m); right: var(--m); max-height: 560px; font-size: 200px; }
+.hero-sub { position: absolute; top: 860px; left: var(--m); right: 200px; max-height: 110px; }
+
+/* ── statement ── */
+.st-art { position: absolute; top: 170px; left: var(--m); width: 420px; height: 336px; }
+.st-h { position: absolute; top: 560px; left: var(--m); right: var(--m); max-height: 420px; font-size: 132px; }
+.st-sub { position: absolute; top: 1010px; left: var(--m); right: 160px; max-height: 110px; }
+
+/* ── mega ── */
+.mg-top { position: absolute; top: 170px; left: var(--m); right: var(--m); max-height: 200px; font-size: 84px; }
+.mega { position: absolute; top: 420px; left: var(--m); right: var(--m); height: 470px; font-size: 560px; font-weight: var(--heavy);
+  line-height: .84; letter-spacing: -.06em; text-indent: -.03em; white-space: nowrap; overflow: hidden; color: var(--fg); }
+.mg-sub { position: absolute; top: 960px; left: var(--m); right: 160px; max-height: 160px; }
+
+/* ── countdown ── */
+.cd-n { position: absolute; top: 150px; left: var(--m); right: var(--m); height: 700px; font-size: 900px; font-weight: var(--heavy); line-height: .78;
+  letter-spacing: -.07em; text-indent: -.025em; white-space: nowrap; overflow: hidden; color: var(--marktext); }
+.cd-l { position: absolute; top: 870px; left: var(--m); font-size: 96px; font-weight: var(--heavy); letter-spacing: -.045em; line-height: 1; color: var(--fg); }
+.cd-h { position: absolute; top: 1000px; left: var(--m); right: 200px; max-height: 170px; font-size: 64px; }
+
+/* ── photo ── */
+.photo.full { position: absolute; inset: 0; }
+.shade { position: absolute; left: 0; right: 0; bottom: 0; height: 62%; background: rgba(0,0,0,.42); }
+.l-photo { --fg: #fff; --body: #fff; }
+.chip.on-photo { top: auto; bottom: 640px; }
+.ph-h { position: absolute; left: var(--m); right: var(--m); bottom: 170px; max-height: 440px; font-size: 136px; color: #fff; }
+.l-photo .top, .l-photo .foot { color: #fff; }
+
+/* ── frame ── */
+.fr-h { position: absolute; top: 170px; left: var(--m); right: var(--m); max-height: 330px; font-size: 124px; }
+.fr-photo { position: absolute; top: 540px; left: var(--m); right: var(--m); bottom: 150px; border-radius: var(--r); }
+
+/* ── split ── */
+.sp-side { position: absolute; top: 0; right: 0; bottom: 0; width: 46%; background: var(--fg0); display: grid; place-items: center; --bg: var(--fg0); --fg: var(--bg0); }
+.sp-side .photo.cover { position: absolute; inset: 0; }
+.sp-art { width: 86%; height: 50%; }
+.sp-h { position: absolute; top: 262px; left: var(--m); right: 54%; max-height: 520px; font-size: 104px; }
+.sp-sub { position: absolute; top: 820px; left: var(--m); right: 54%; max-height: 150px; font-size: 32px; }
+.sp-cta { position: absolute; left: var(--m); bottom: 130px; } .sp-cta b { font-size: 60px; } .sp-cta b + b { font-size: 44px; } .sp-cta small { font-size: 28px; }
+.sp-foot { right: 54%; }
+
+/* ── list (never numbered: an icon each) ── */
+.ls-h { position: absolute; top: 170px; left: var(--m); right: var(--m); max-height: 250px; font-size: 108px; }
+.ls { position: absolute; top: 480px; left: var(--m); right: var(--m); display: flex; flex-direction: column; gap: 26px; }
+.ls li { display: flex; align-items: center; gap: 26px; font-size: 48px; font-weight: var(--heavy); letter-spacing: -.03em; color: var(--fg); }
+.ls-ic { flex: none; width: 88px; height: 88px; padding: 12px; border-radius: 50%; background: var(--card); }
+.ls-ic svg { width: 100%; height: 100%; }
+
+/* ── quote ── */
+.qt-mark { position: absolute; top: 140px; left: 0; right: 0; text-align: center; font-style: normal; font-size: 420px; font-weight: var(--heavy); line-height: .8; color: var(--marktext); }
+.qt { position: absolute; top: 470px; left: var(--m); right: var(--m); max-height: 500px; font-size: 92px; font-weight: var(--heavy); line-height: 1.04;
+  letter-spacing: calc(var(--track) * .8); text-align: center; text-wrap: balance; color: var(--fg); }
+.qt-by { position: absolute; top: 1030px; left: var(--m); right: var(--m); text-align: center; font-size: 34px; font-weight: 700; color: var(--body); }
+
+/* ── stack ── */
+.sk-h { position: absolute; top: 170px; left: var(--m); right: var(--m); max-height: 230px; font-size: 96px; }
+.sk { position: absolute; top: 470px; left: var(--m); right: var(--m); display: flex; flex-direction: column; align-items: center; gap: 40px; }
+.sk span { padding: 22px 56px; border-radius: 999px; font-size: 76px; font-weight: var(--heavy); letter-spacing: -.035em; line-height: 1;
+  transform: rotate(var(--t)); white-space: nowrap; }
+.sk-0 { background: var(--chip); color: var(--chipfg); } .sk-1 { background: var(--card); color: var(--cardfg); } .sk-2 { background: var(--fg); color: var(--bg); }
+
+/* ── quiz ── */
+.qz-h { position: absolute; top: 170px; left: var(--m); right: var(--m); font-size: 176px; font-weight: var(--heavy); line-height: .9; letter-spacing: -.05em; white-space: nowrap; color: var(--fg); }
+.qz-q { position: absolute; top: 400px; left: var(--m); right: var(--m); max-height: 200px; font-size: 58px; font-weight: 700; line-height: 1.1; letter-spacing: -.025em; color: var(--fg); }
+.qz { position: absolute; top: 640px; left: var(--m); right: var(--m); display: flex; flex-direction: column; gap: 32px; }
+.qz li { display: flex; align-items: center; gap: 24px; padding: 16px 30px 16px 16px; border-radius: calc(var(--r) * .9); background: var(--card); color: var(--cardfg); font-size: 44px; font-weight: var(--heavy); letter-spacing: -.025em; }
+.qz li b { display: grid; place-items: center; flex: none; width: 76px; height: 76px; border-radius: calc(var(--r) * .6); background: var(--chip); color: var(--chipfg); font-size: 40px; }
+
+/* ── swiss ── */
+.sw-word { position: absolute; top: 120px; left: calc(var(--m) * .6); right: calc(var(--m) * .6); font-size: 420px; font-weight: var(--heavy); line-height: .86;
+  letter-spacing: -.055em; text-indent: -.04em; white-space: nowrap; color: var(--fg); }
+.sw-h { position: absolute; top: 640px; left: var(--m); right: var(--m); max-height: 260px; font-size: 92px; }
+.sw-cols { position: absolute; top: 960px; left: var(--m); right: var(--m); display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; font-size: 32px; font-weight: 700; line-height: 1.2; color: var(--body); }
+.sw-cols ul { display: grid; gap: 12px; }
+
+/* ── ticket ── */
+.tk-h { position: absolute; top: 170px; left: var(--m); right: var(--m); max-height: 330px; font-size: 140px; }
+.tk { position: absolute; top: 560px; left: var(--m); right: var(--m); bottom: 150px; display: flex; flex-direction: column; color: var(--cardfg); }
+.tk-main { flex: 1; background: var(--card); border-radius: var(--r) var(--r) 0 0; padding: 44px 52px 30px; display: flex; flex-direction: column; justify-content: space-between; }
+.tk-row { display: flex; justify-content: space-between; align-items: center; }
+.tk-row small, .tk-grid small { display: block; font-size: 24px; font-weight: 700; opacity: .7; }
+.tk-row b { display: block; font-size: 130px; font-weight: var(--heavy); letter-spacing: -.05em; line-height: .95; }
+.tk-row span { font-size: 28px; font-weight: 500; }
+.tk-row > div:last-child { text-align: right; }
+.tk-arrow { font-size: 80px; font-weight: var(--heavy); }
+.tk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; border-top: 3px dashed currentColor; border-top-color: color-mix(in srgb, currentColor 25%, transparent); padding-top: 22px; }
+.tk-grid span { font-size: 34px; font-weight: var(--heavy); }
+.tk-stub { height: 120px; background: var(--card); border-radius: 0 0 var(--r) var(--r); border-top: 4px dashed color-mix(in srgb, var(--cardfg) 25%, transparent);
+  display: flex; align-items: center; padding: 0 52px; font-size: 36px; font-weight: var(--heavy); }
+
+/* ── tip ── */
+.tp-h { position: absolute; top: 262px; left: var(--m); right: var(--m); max-height: 330px; font-size: 112px; }
+.tp-paper { top: 650px; left: var(--m); right: var(--m); height: 330px; padding: 48px 52px; }
+.tp-body { height: 100%; font-size: 42px; font-weight: var(--regular); line-height: 1.3; color: var(--cardfg); overflow: hidden; }
+
+/* ── corner ── */
+.cn-col { position: absolute; top: 170px; left: var(--m); right: 300px; display: flex; flex-direction: column; align-items: flex-start; gap: 36px; }
+.cn-h { max-height: 470px; font-size: 140px; width: 100%; }
+.cn-sub { max-width: 440px; max-height: 160px; }
+.cn-art { position: absolute; right: -110px; bottom: -70px; width: 760px; height: 608px; }
+
+/* ── places ── */
+.pl-h { position: absolute; top: 170px; left: var(--m); right: var(--m); max-height: 260px; font-size: 116px; }
+.pl { position: absolute; top: 500px; left: var(--m); right: var(--m); display: flex; flex-wrap: wrap; gap: 30px 24px; }
+.pl li { padding: 24px 42px; border-radius: 999px; background: var(--card); color: var(--cardfg); font-size: 54px; font-weight: var(--heavy); letter-spacing: -.02em; }
+.pl li:nth-child(3n+1) { background: var(--chip); color: var(--chipfg); }

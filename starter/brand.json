@@ -1,0 +1,76 @@
+{
+  "name": "Oven & Co",
+  "campaign": "Grand opening",
+  "slug": "ovenco-opening",
+  "description": "Fresh bread and cakes, baked every morning",
+  "city": "Lagos",
+  "handle": "@ovenandco",
+  "socials": [
+    "instagram",
+    "facebook"
+  ],
+  "phones": [
+    "0800 000 0000"
+  ],
+  "email": "hello@ovenandco.example",
+  "website": "ovenandco.example",
+  "cta": "Order on WhatsApp",
+  "hashtags": "#OvenAndCo #LagosBakery #FreshBread",
+  "logo": {
+    "file": "",
+    "mono": true
+  },
+  "font": {
+    "family": "Inter",
+    "google": "Inter:wght@400;500;700;900",
+    "files": {},
+    "heavy": 900,
+    "body": 400
+  },
+  "colors": {
+    "primary": "#B4451F",
+    "ink": "#2B140B",
+    "accent": "#F2C14E",
+    "accent2": "#3E7C59",
+    "tint": "#FBEFE6",
+    "paper": "#FFFFFF"
+  },
+  "style": {
+    "mark": "stroke",
+    "strokePath": "M0.7 0.22 H75 L22 0.78 H99.3",
+    "radius": 28,
+    "margin": 72,
+    "tracking": -0.045,
+    "leading": 0.94
+  },
+  "services": [
+    {
+      "name": "Fresh bread daily",
+      "short": "Bread",
+      "icon": "star"
+    },
+    {
+      "name": "Cakes to order",
+      "short": "Cakes",
+      "icon": "gift"
+    },
+    {
+      "name": "Breakfast boxes",
+      "short": "Breakfast",
+      "icon": "clock"
+    },
+    {
+      "name": "Delivery across the city",
+      "short": "Delivery",
+      "icon": "truck"
+    }
+  ],
+  "places": [
+    "Ikoyi",
+    "Lekki",
+    "Victoria Island",
+    "Yaba",
+    "Surulere",
+    "Ikeja"
+  ]
+}

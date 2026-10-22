@@ -1,0 +1,267 @@
+/* The poster family (layouts/poster.js). Sized in cqw of the post (1cqw = 10.8px on a 1080 post),
+   so the compositions hold at any export size. The brand brings the font, colours, margin and radius. */
+[class*=" l-po-"] { container-type: inline-size; --font-alt: var(--font); }
+.po { position: absolute; inset: 0; color: var(--fg); }
+.po-col { display: flex; flex-direction: column; align-items: flex-start; padding: 8cqw var(--m); }
+.po-col > * { flex: none; }
+.po-c { align-items: center; text-align: center; }
+
+/* the word to look at: on a block of the opposite colour (the mark's colour, with the words that read on it) */
+[class*=" l-po-"].m-block .hl { background: var(--chip); color: var(--chipfg); padding: 0 .14em .04em; border-radius: .18em; line-height: 1.05; }
+
+/* ── type ── */
+.po .po-h { width: 100%; font-size: var(--fs); }
+.po .po-h-top { max-height: 41cqw; }
+.po .po-sub { margin-top: 3cqw; max-width: 62%; max-height: 19cqw; font-size: 5cqw; font-weight: max(var(--regular), 600); line-height: 1.25; letter-spacing: -.01em; }
+.po .po-sub-c { max-width: none; text-align: center; }
+.po .po-sub-wide { max-width: none; }
+.po-kick { display: block; margin-bottom: 3cqw; font-size: 3.8cqw; font-weight: var(--heavy); letter-spacing: -.01em; line-height: 1.1; opacity: .75; color: var(--fg); }
+.po-kick-logo { opacity: 1; } .po-kick-logo .wm { height: 5cqw; } .po-kick-logo .wm-text { font-size: 4.4cqw; }
+.po-label, .po-tag { align-self: flex-start; margin-bottom: 4cqw; padding: 1.6cqw 3.8cqw; border-radius: 999px; font-size: 3.8cqw; font-weight: var(--heavy); line-height: 1.05; letter-spacing: -.01em; white-space: nowrap; }
+.po-chip { background: var(--chip); color: var(--chipfg); }
+.po-inv { background: var(--fg); color: var(--bg); }
+
+/* ── the foot: the name, and the handle in a pill ── */
+.po-foot { margin-top: auto; width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 3cqw; color: var(--fg); }
+.po-foot .wm-text { font-size: 6.5cqw; letter-spacing: -.03em; line-height: 1; }
+.po-foot .wm { height: 6.5cqw; }
+.po-handle { padding: 1.7cqw 3.4cqw; border-radius: 999px; }
+.po-handle .handle { font-size: 3cqw; gap: 1cqw; } .po-handle .handle i { width: 3.4cqw; height: 3.4cqw; }
+
+/* ── pictures: as big as the post, running off its edges; a gap above so they never touch the words ── */
+.po-art { flex: none; }
+.po-art.bleed { padding-top: 3cqw; margin-top: auto; }
+.po-art img { object-fit: contain; object-position: 50% 0; }
+.po-a-rise { align-self: center; width: 84cqw; height: 72cqw; margin-bottom: calc(-8cqw - 15cqw); }
+.po-a-right { align-self: flex-end; width: 84cqw; height: 74cqw; margin-right: calc(-1 * var(--m) - 22cqw); margin-bottom: calc(-8cqw - 18cqw); }
+.po-a-left { align-self: flex-start; width: 84cqw; height: 74cqw; margin-left: calc(-1 * var(--m) - 22cqw); margin-bottom: calc(-8cqw - 18cqw); }
+.po-a-big { align-self: center; width: 116cqw; height: 92cqw; margin-bottom: calc(-8cqw - 26cqw); }
+.po-a-corner { align-self: flex-end; width: 92cqw; height: 80cqw; margin-right: calc(-1 * var(--m) - 14cqw); margin-bottom: calc(-8cqw - 12cqw); }
+.po-mid { flex: 1 1 0; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; padding: 4cqw 0; }
+.po-a-mid, .po-a-flat { width: 100%; height: 100%; max-height: 60cqw; }
+.po-a-flat { max-height: none; }
+
+/* ── a glyph: a letter or number set as big as a picture ── */
+.po-glyph { display: block; font-size: var(--gs); font-weight: var(--heavy); line-height: .8; letter-spacing: -.04em; white-space: nowrap; color: var(--marktext); }
+.po-g-right { position: absolute; z-index: 1; right: -9cqw; bottom: 10cqw; width: 60cqw; text-align: right; }
+.po .po-h-g { max-height: 28cqw; }
+.po .po-sub-g { max-height: 12.5cqw; }
+
+/* ── mega ── */
+.po .po-mega { line-height: .86; letter-spacing: -.05em; max-height: 86cqw; }
+.po .po-mega2 { line-height: .92; letter-spacing: -.045em; max-height: 86cqw; }
+
+/* ── quote ── */
+.po-qm { display: block; margin-top: auto; height: 20cqw; font-size: 40cqw; font-weight: var(--heavy); line-height: 1; color: var(--marktext); }
+.po .po-quote { margin-top: 2cqw; line-height: 1.1; max-height: 60cqw; }
+.l-po-quote .po-sub { margin-bottom: 4cqw; }
+
+/* ── cloud ── */
+.po-cloud { position: relative; display: grid; place-items: center; flex: 1 1 0; min-height: 0; width: calc(100% + 12cqw); margin: -4cqw -6cqw 3cqw; color: var(--fg); }
+.po-cloud > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.po-cloud > div { position: relative; width: 62%; display: flex; flex-direction: column; align-items: center; }
+.po-cloud .po-kick { margin-bottom: 2cqw; }
+.po .po-cloud-h { max-height: 42cqw; }
+.po-cloud .po-sub { max-height: 13cqw; }
+
+/* ── words in pills ── */
+.po .po-h-pills { max-height: 28cqw; margin-bottom: 4cqw; }
+.po-stack { display: flex; flex-direction: column; align-items: center; gap: .5em; margin: auto 0 6cqw; width: 100%; max-height: 50cqw; font-size: 7.8cqw; }
+.po-stack span { padding: .3em .82em; border-radius: 999px; font-weight: var(--heavy); line-height: 1; letter-spacing: -.02em; white-space: nowrap;
+  background: var(--sw); color: var(--swfg); transform: rotate(calc(var(--k) * 2.2deg)); }
+.po-stack span:nth-child(even) { transform: rotate(calc(var(--k) * -1.4deg)); }
+
+/* ── three glyphs in a row ── */
+.po-nums { display: flex; justify-content: space-between; align-items: center; flex: 1 1 0; min-height: 0; width: 100%; }
+.po .po-h-nums { max-height: 26cqw; margin-bottom: 5cqw; }
+
+/* ── ready: a dot to press ── */
+.po .po-h-ready { max-height: 42cqw; }
+.po-dot { align-self: flex-end; margin: 5cqw 6cqw 0 0; width: 16cqw; height: 16cqw; border-radius: 50%; background: var(--chip); border: 2.6cqw solid var(--fg); }
+
+/* ── balloon ── */
+.po .po-h-bal { width: 60%; max-height: 44cqw; }
+.po-bal { position: absolute; z-index: 2; right: 10cqw; top: 9cqw; display: flex; flex-direction: column; align-items: center; }
+.po-bal > b { display: grid; place-items: center; width: 22cqw; height: 27cqw; border-radius: 50% 50% 48% 48%; background: var(--sw); color: var(--swfg); font-size: 13cqw; font-weight: var(--heavy); line-height: 1; }
+.po-bal > i { display: block; width: .7cqw; height: 15cqw; border-radius: 1cqw; background: var(--fg); opacity: .3; }
+
+/* ── a glyph on a tile ── */
+.po-tile { position: absolute; left: var(--m); bottom: 8cqw; display: grid; place-items: center; width: 36cqw; height: 36cqw; border-radius: 7cqw; background: var(--bg); }
+.po-tile .po-glyph { line-height: 1; }
+.po-a-tile { position: absolute; right: -16cqw; bottom: -18cqw; width: 64cqw; height: 60cqw; }
+.l-po-tile .po-h-top { max-height: 36cqw; }
+
+/* ── a row of glyphs under huge words ── */
+.l-po-row .po .po-mega { max-height: 62cqw; }
+.po-row { display: flex; justify-content: space-between; width: 100%; margin: auto 0 6cqw; }
+.po-row-g { font-size: 17cqw; font-weight: var(--heavy); line-height: 1; color: var(--fg); }
+.po-faint { opacity: .2; }
+
+/* ── release ── */
+.po-rel-top { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 5cqw; }
+.po-rel-top .po-tag { margin: 0; font-size: 4cqw; }
+.po-soon { border: .6cqw solid currentColor; color: var(--fg); }
+.po-ver { font-size: 4cqw; font-weight: var(--heavy); opacity: .75; }
+.po .po-h-rel { max-height: 33cqw; }
+.po-vis { position: relative; flex: 1 1 0; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; margin: 4cqw 0; }
+.po-a-vis { width: 100%; height: 100%; max-height: 50cqw; }
+.po-vis-g { display: flex; gap: 5cqw; }
+.po-badge { position: absolute; z-index: 3; right: 0; bottom: 0; width: 28cqw; height: 28cqw; display: grid; place-items: center; transform: rotate(-12deg); color: var(--swfg); }
+.po-badge > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.po-badge b { position: relative; max-width: 78%; font-size: 4.6cqw; font-weight: var(--heavy); line-height: 1.05; text-align: center; }
+
+/* ── stickers: scallop, circle, tag, pill, blob; tilted, never pointy ── */
+.po-stick { position: absolute; z-index: 4; right: 5cqw; top: 62cqw; }
+.po-stick-bl { top: auto; bottom: 21cqw; right: auto; left: 6cqw; }
+.po-stick-mega { top: auto; bottom: 21cqw; }
+.po-stick-pills { top: auto; bottom: 26cqw; right: 3cqw; }
+.po-stick-photo { top: auto; bottom: 44cqw; right: auto; left: 5cqw; }
+.po-stick-frame { top: auto; bottom: 34cqw; right: 5cqw; }
+.po-stick-phk { top: 44cqw; }
+.po-st { position: relative; display: inline-grid; place-items: center; text-align: center; background: var(--sw); color: var(--swfg); transform: rotate(var(--tilt)); }
+.po-st b { position: relative; font-size: 5.6cqw; font-weight: var(--heavy); line-height: 1; letter-spacing: -.02em; }
+.po-st-pill { padding: 2.8cqw 5cqw; border-radius: 999px; white-space: nowrap; }
+.po-st-tag { padding: 2.8cqw 5cqw 2.8cqw 6.8cqw; border-radius: 1.4cqw 999px 999px 1.4cqw; white-space: nowrap; }
+.po-st-tag::before { content: ""; position: absolute; left: 2.4cqw; top: 50%; width: 1.8cqw; height: 1.8cqw; margin-top: -.9cqw; border-radius: 50%; background: currentColor; opacity: .8; }
+.po-st-circle { width: 26cqw; height: 26cqw; padding: 2.4cqw; border-radius: 50%; }
+.po-st-scallop { width: 28cqw; height: 28cqw; padding: 4.4cqw; background: none; }
+.po-st-circle b, .po-st-scallop b { font-size: min(5.6cqw, calc(33cqw / var(--stl))) !important; }
+.po-st-scallop > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.po-st-blob { padding: 3.4cqw 5cqw; border-radius: 58% 42% 50% 50% / 55% 50% 50% 45%; white-space: nowrap; }
+
+/* ── whole posts in another script ── */
+.po-script { font-family: var(--font-alt); }
+.po-script .po-foot, .po-script .po-flat-top .po-site { font-family: var(--font); }
+.po-huge { display: block; width: 100%; font-size: 21cqw; font-weight: var(--heavy); line-height: 1.12; letter-spacing: var(--track); white-space: nowrap; text-align: center; }
+.po-frame { position: relative; display: grid; place-items: center; flex: 1 1 0; min-height: 0; width: 100%; margin: 2cqw 0; }
+.po-frame > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.po-a-frame { position: relative; width: 60%; height: 60%; }
+.l-po-word-frame .po-sub { margin-top: 1cqw; max-height: 12cqw; }
+
+.po-col.po-half { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; padding: 0; }
+.po-half-t { display: flex; flex-direction: column; align-items: flex-start; padding: 8cqw 4cqw 8cqw 0; padding-inline-start: var(--m); min-width: 0; }
+.po .po-h-half { max-height: 68cqw; margin-top: auto; }
+.po .po-sub-half { max-width: none; max-height: 30cqw; }
+.po-half-photo { height: 100%; }
+
+.po-flat-top { display: flex; justify-content: space-between; align-items: baseline; width: 100%; }
+.po-flat-top .wm-text { font-size: 7cqw; } .po-flat-top .wm { height: 7cqw; }
+.po-site { font-size: 3.6cqw; font-weight: 700; opacity: .75; }
+.po .po-h-flat { max-height: 30cqw; }
+
+.po-pattern { position: absolute; inset: -4cqw; display: grid; align-content: space-around; overflow: hidden; }
+.po-pattern span { white-space: nowrap; font-size: 19cqw; font-weight: var(--heavy); line-height: 1; color: var(--mark); opacity: .3; }
+.po-d .po-pattern span { color: var(--marktext); opacity: .22; }
+.po-patk { position: relative; display: grid; place-items: center; flex: 1 1 0; min-height: 0; width: 100%; padding-bottom: 4cqw; }
+.po-a-pat { width: 100%; height: 100%; max-height: 88cqw; }
+.l-po-pattern .po-foot { position: relative; }
+
+.po-bignum { display: block; width: 100%; margin: -4cqw 0 1cqw; font-size: var(--ns); font-weight: var(--heavy); line-height: .95; letter-spacing: -.04em; white-space: nowrap; color: var(--marktext); }
+.po .po-h-num { max-height: 25cqw; }
+
+.po-objs { position: absolute; inset: 0; }
+.po-objs > span { position: absolute; display: block; aspect-ratio: 1; }
+.po-obj { width: 100%; height: 100%; }
+.po-objt { margin: auto 0; width: 100%; display: flex; flex-direction: column; align-items: center; }
+.po .po-h-obj { max-height: 38cqw; }
+.po .po-h-bigline { max-height: 82cqw; line-height: max(var(--lead), 1.04); }
+.po-script[dir="rtl"] .po-h { line-height: 1.25; }
+
+/* ── the Swiss set: tight, edge to edge ── */
+.po-sw { display: flex; flex-direction: column; align-items: flex-start; padding: 5cqw; }
+.po-sw > * { flex: none; }
+.po-sw-word { display: block; width: 100%; font-size: var(--fs); font-weight: var(--heavy); line-height: .86; letter-spacing: -.055em; text-indent: -.04em; white-space: nowrap; color: var(--fg); }
+.po-end { margin-top: auto; }
+.po-sw-cols { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4cqw; margin-top: 7cqw; width: 100%; }
+.po-sw-mid { display: block; font-size: 7.6cqw; font-weight: var(--heavy); line-height: 1; letter-spacing: -.03em; overflow-wrap: anywhere; }
+.po-sw ul { display: grid; gap: 2.6cqw; align-content: start; }
+.po-sw li { font-size: 4.4cqw; font-weight: 700; line-height: 1.15; }
+.po-alt { font-family: var(--font-alt); font-weight: var(--heavy); }
+.po-alt-mid { display: block; margin-top: 3cqw; font-size: 8cqw; line-height: 1.3; }
+.po-grow { display: grid; width: 100%; max-height: 84cqw; font-size: var(--fs); }
+.po-grow b { font-weight: var(--heavy); line-height: .86; letter-spacing: -.055em; white-space: nowrap; color: var(--fg); }
+.po-d .po-grow b { color: var(--marktext); }
+.po-sw-row { display: flex; align-items: center; justify-content: space-between; margin-top: auto; width: 100%; }
+.po-roundel { display: grid; place-items: center; width: 24cqw; height: 24cqw; padding: 2cqw; border-radius: 50%; text-align: center; }
+.po-roundel b { font-size: 5cqw; font-weight: var(--heavy); line-height: 1; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.po-roundel .po-alt { font-size: 8cqw; line-height: 1.1; }
+.po-side { position: absolute; left: 3cqw; top: 4cqw; bottom: 4cqw; writing-mode: vertical-rl; transform: rotate(180deg); font-size: var(--fs); font-weight: var(--heavy);
+  line-height: .86; letter-spacing: -.055em; white-space: nowrap; text-align: right; color: var(--fg); }
+.po-d .po-side { color: var(--marktext); }
+.po-sideinfo { position: absolute; right: 6cqw; top: 6cqw; bottom: 6cqw; width: 42%; display: flex; flex-direction: column; align-items: flex-end; gap: 4cqw; text-align: right; }
+.po-sidepic { display: grid; place-items: center; width: 100%; aspect-ratio: 1; border-radius: 6cqw; background: var(--bg); }
+.po-sidepic .po-glyph { line-height: 1; }
+.po-a-side { width: 80%; height: 80%; }
+.po-alt-big { margin-top: auto; font-size: 22cqw; line-height: 1; }
+.po-sw-pic { position: relative; display: grid; place-items: center; flex: 1 1 0; min-height: 0; width: 100%; margin: 6cqw 0 4cqw; border-radius: 4cqw; background: var(--bg); overflow: hidden; }
+.po-a-swpic { width: 82%; height: 82%; }
+.po-sw-pic.po-bare { background: none; margin: 3cqw 0; overflow: visible; }
+.po-alt-tag { position: absolute; right: 0; top: 0; padding: 1.5cqw 4cqw; border-radius: 999px; font-size: 6cqw; line-height: 1.2; }
+.po-sw-foot { display: grid; grid-template-columns: minmax(max-content, 1fr) 1.4fr; gap: 3cqw; align-items: end; width: 100%; font-size: 3.6cqw; font-weight: 700; line-height: 1.25; }
+.po-sw-foot .wm-text { white-space: nowrap; font-size: 8cqw; line-height: 1; letter-spacing: -.03em; } .po-sw-foot .wm { height: 8cqw; }
+.po .po-note { margin-top: 3.5cqw; font-size: 4.4cqw; font-weight: 700; line-height: 1.25; }
+.po .po-note-top { margin-top: 4cqw; opacity: .8; }
+.po .po-sw-head { width: 100%; font-size: 15cqw; line-height: .9; letter-spacing: -.045em; max-height: 42cqw; }
+.po-blocks { position: relative; flex: 1 1 0; width: 100%; margin: 5cqw 0; }
+.po-blocks i { position: absolute; }
+.po-blk-a { left: 0; bottom: 0; width: 58%; height: 34%; background: var(--sw); }
+.po-blk-b { right: 6%; bottom: 0; width: 26%; height: 88%; background: var(--fg); }
+.po-alt-blk { position: absolute; left: 2cqw; top: 4cqw; max-width: 58%; font-size: 16cqw; line-height: 1; }
+.po-bleedw { display: block; margin: auto -6cqw 0; font-size: var(--fs); font-weight: var(--heavy); line-height: .8; letter-spacing: -.06em; white-space: nowrap; color: var(--fg); }
+.po-d .po-bleedw { color: var(--marktext); }
+.po-solo .po-bleedw { margin-bottom: auto; }
+.po-alt-bleed { display: block; width: 100%; margin: 4cqw 0 auto; font-size: 15cqw; line-height: 1.2; text-align: end; }
+.po-sw .po-sw-foot { margin-top: 4cqw; }
+.po-lines { position: absolute; inset: 0; display: grid; align-content: space-between; padding: 2cqw 0; overflow: hidden; }
+.po-lines b { margin-left: -2cqw; font-size: var(--fs); font-weight: var(--heavy); line-height: .95; letter-spacing: -.04em; white-space: nowrap; color: var(--fg); }
+.po-d .po-lines b { color: var(--marktext); }
+.po-alt-over { position: absolute; left: 50%; top: 50%; translate: -50% -50%; padding: 3cqw 9cqw 5cqw; border-radius: 999px; font-size: 20cqw; line-height: 1.1; white-space: nowrap; }
+
+/* ── a big word with stickers round it ── */
+.po-stp { display: grid; place-items: center; }
+.po-stp-word { position: relative; z-index: 1; margin-top: -12cqw; width: calc(100% - 2 * var(--m)); font-size: 27cqw; font-weight: var(--heavy); line-height: .9; letter-spacing: -.04em; text-align: center; white-space: nowrap; color: var(--marktext); }
+.po-spot { position: absolute; z-index: 2; }
+.po-spot-0 { left: 6cqw; top: 7cqw; } .po-spot-1 { right: 6cqw; top: 10cqw; } .po-spot-2 { left: 6cqw; bottom: 25cqw; }
+.po-spot-3 { right: 6cqw; bottom: 28cqw; } .po-spot-4 { left: 0; right: 0; bottom: 8cqw; display: flex; justify-content: center; }
+.po-spot-4 .po-st { --tilt: -3deg !important; }
+.po-stp .po-st b { font-size: 5.8cqw; }
+.po-stp .po-st-pill { padding: 2.8cqw 5cqw; } .po-stp .po-st-tag { padding: 2.8cqw 5cqw 2.8cqw 7cqw; }
+.po-stp .po-st-circle { width: 25cqw; height: 25cqw; } .po-stp .po-st-scallop { width: 27cqw; height: 27cqw; padding: 4.6cqw; }
+.po-stp .po-st-blob { padding: 3.6cqw 5.6cqw; }
+.po-stp .po-st-pill, .po-stp .po-st-tag, .po-stp .po-st-blob { max-width: 40cqw; white-space: normal; line-height: 1.05; }
+.po-stp .po-spot-4 .po-st { max-width: 62cqw; }
+.po-stp .po-st-scallop b { font-size: 6.2cqw; }
+
+/* ── shape bands ── */
+.po-bands { display: flex; flex-direction: column; justify-content: center; gap: 5cqw; padding: 8cqw 0; }
+.po-band-row { display: flex; gap: 3.5cqw; margin-left: -14cqw; flex: none; }
+.po-band-row.po-off { margin-left: -30cqw; }
+.po-bs { flex: none; display: grid; place-items: center; height: var(--bh, 30cqw); background: var(--bg); color: var(--fg); overflow: hidden; }
+.po-bs.po-sw-bg { background: var(--sw); color: var(--swfg); }
+.po-bs b { padding: 0 6cqw; font-size: 9cqw; font-weight: var(--heavy); line-height: 1; letter-spacing: -.02em; white-space: nowrap; }
+.po-bs b.po-long { font-size: 7.4cqw; }
+.po-bs-rect { min-width: var(--bh, 30cqw); border-radius: 8cqw; }
+.po-bs-cap { border-radius: 999px; }
+.po-bs-circle { width: var(--bh, 30cqw); border-radius: 50%; } .po-bs-circle b { padding: 0; font-size: 8cqw; }
+.po-bs-dome { width: 48cqw; border-radius: 999px 999px 0 0; align-items: end; }
+.po-a-band { width: 34cqw; height: calc(var(--bh, 30cqw) * .86); }
+.po-bs-circle .po-a-band { width: 80%; height: 70%; }
+.po-band-foot { flex: none; width: auto; margin: 6cqw var(--m) 0; }
+
+/* ── photos ── */
+.l-po-photo-full .photo.full { position: absolute; inset: 0; }
+.po-shade { position: absolute; inset: 0; background: rgba(0, 0, 0, .52); }
+.po-onphoto { --fg: #fff; --body: #fff; color: #fff; }
+.po .po-h-photo { max-height: 39cqw; }
+.po-alt-photo { display: block; width: 100%; margin: auto 0 3cqw; font-size: 12cqw; line-height: 1.3; text-align: end; }
+.po-alt-photo + .po-foot { margin-top: 0; }
+.po-ph-frame { position: relative; flex: 1 1 0; min-height: 0; width: 100%; margin: 4cqw 0; border-radius: 6cqw; overflow: hidden; }
+.po-ph { width: 100%; height: 100%; }
+.po-alt-tag2 { position: absolute; right: 4cqw; bottom: 3cqw; padding: 1cqw 4cqw 1.6cqw; border-radius: 999px; font-size: 7cqw; line-height: 1.25; }
+.po-ph-round { display: grid; place-items: center; flex: 1 1 0; min-height: 0; width: 100%; margin: 3cqw 0; }
+.po-ph-round .po-ph { height: 100%; max-height: 62cqw; width: auto; aspect-ratio: 1; border-radius: 50%; }
+.po-alt-round { display: block; width: 100%; margin: 0 0 3cqw; font-size: 10cqw; line-height: 1.3; text-align: end; }
+.po-ph-top { position: absolute; left: 0; right: 0; top: 0; height: 52cqw; }
+.po-col.po-phk { padding-top: 59cqw; }
+.po .po-h-phk { width: 74%; max-height: 27cqw; }
+.po-a-phk { align-self: flex-end; width: 50cqw; height: 44cqw; margin-right: calc(-1 * var(--m) - 9cqw); margin-bottom: calc(-8cqw - 12cqw); }

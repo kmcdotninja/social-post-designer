@@ -1,0 +1,52 @@
+/* A post: 1080 × 1350 (Instagram 4:5). The brand's font, margin, radius and colourway come in as variables
+   (brand.js); the grid below is the same for every brand:
+     top bar 64 · first line 170 (262 under a sticker) · call bottom 130 · foot bottom 58 · margin --m both sides */
+.post { position: relative; width: 1080px; height: 1350px; overflow: hidden; box-sizing: border-box;
+  font-family: var(--font); background: var(--bg); color: var(--fg); -webkit-font-smoothing: antialiased; text-rendering: geometricPrecision; }
+.post *, .post *::before, .post *::after { box-sizing: border-box; }
+.post img, .post svg { display: block; }
+.post p, .post h1, .post ul, .post ol, .post blockquote { margin: 0; padding: 0; list-style: none; }
+
+/* ── type: the bigger the type, the tighter its leading and tracking ── */
+.h { font-weight: var(--heavy); line-height: var(--lead); letter-spacing: var(--track); text-wrap: balance; color: var(--fg); font-kerning: normal; }
+.h.mid { line-height: 1.02; letter-spacing: calc(var(--track) * .8); }
+.sub { font-size: 38px; font-weight: var(--regular); line-height: 1.28; letter-spacing: -.01em; color: var(--body); text-wrap: pretty; }
+.note { position: absolute; left: var(--m); bottom: 140px; font-size: 34px; font-weight: 700; letter-spacing: -.01em; color: var(--fg); }
+.nw { white-space: nowrap; }
+
+/* the key word: stroke (drawn by layouts.js), block, underline or colour */
+.hl { position: relative; }
+.stroke { position: absolute; z-index: 3; overflow: visible; pointer-events: none; }
+.m-block .hl { display: inline-block; padding: 0 .12em .04em; border-radius: .16em; background: var(--fg); color: var(--bg); line-height: 1.04; }
+.m-underline .hl { text-decoration: underline; text-decoration-color: var(--mark); text-decoration-thickness: .09em; text-underline-offset: .1em; text-decoration-skip-ink: none; }
+.m-color .hl { color: var(--marktext); }
+
+/* ── chrome ── */
+.top { position: absolute; z-index: 5; top: 64px; left: var(--m); right: var(--m); height: 56px; display: flex; justify-content: space-between; align-items: center; color: var(--fg); }
+.wm { height: 52px; width: auto; max-width: 420px; }
+.wm-text { font-size: 50px; font-weight: var(--heavy); letter-spacing: -.03em; }
+.place { font-size: 30px; font-weight: 700; color: var(--fg); }
+.foot { position: absolute; z-index: 5; bottom: 58px; left: var(--m); right: var(--m); display: flex; justify-content: space-between; align-items: center; color: var(--fg); }
+.handle { display: inline-flex; align-items: center; gap: 10px; font-size: 26px; font-weight: 700; }
+.handle i { display: block; width: 30px; height: 30px; } .handle i svg { width: 100%; height: 100%; }
+.handle i:last-of-type { margin-right: 4px; }
+.foot-ph { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* the sticker: a pill in the mark colour */
+.chip { position: absolute; z-index: 4; top: 176px; left: var(--m); display: inline-flex; align-items: center; gap: 12px; padding: 14px 28px; border-radius: 999px;
+  background: var(--chip); color: var(--chipfg); font-size: 30px; font-weight: var(--heavy); letter-spacing: -.01em; line-height: 1; white-space: nowrap; }
+.chip-ic { display: block; width: 52px; height: 52px; margin: -8px 0 -8px -14px; padding: 6px; border-radius: 50%; background: var(--card); }
+.chip-ic svg { width: 100%; height: 100%; }
+
+/* the call: a light line, the number big */
+.cta { display: flex; flex-direction: column; gap: 20px; color: var(--fg); }   /* room for descenders: the check measures ink */
+.cta small { font-size: 34px; font-weight: var(--regular); letter-spacing: -.01em; }
+.cta b { font-size: 84px; font-weight: var(--heavy); letter-spacing: -.035em; line-height: .98; font-variant-numeric: tabular-nums; }
+.cta b + b { font-size: 56px; }
+.cta.at-foot { position: absolute; left: var(--m); bottom: 130px; }
+
+/* pictures and photos */
+.art svg, .art img { width: 100%; height: 100%; object-fit: contain; }
+.photo { overflow: hidden; } .photo img { width: 100%; height: 100%; object-fit: cover; }
+.paper { position: absolute; background: var(--card); color: var(--cardfg); border-radius: var(--r); }
+

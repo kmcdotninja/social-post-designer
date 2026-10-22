@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posts</title>
+  <script>/* dark unless light was picked */ let t = "dark"; try { t = localStorage.getItem("posts.theme") || t; } catch {} document.documentElement.dataset.theme = t;</script>
+  <link rel="stylesheet" href="src/post.css">
+  <link rel="stylesheet" href="src/app.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-in">
+      <b class="bar-name" id="name"></b>
+      <div class="bar-title"><span id="count"></span></div>
+      <div class="bar-tools">
+        <div class="seg" id="scale" role="radiogroup" aria-label="PNG resolution">
+          <button role="radio" data-s="1">×1</button><button role="radio" data-s="2" aria-checked="true">×2</button><button role="radio" data-s="3">×3</button><button role="radio" data-s="4">×4</button>
+        </div>
+        <span class="px" id="px">2160 × 2700 px</span>
+        <button class="btn primary" id="all">Download all</button>
+        <button class="mode" id="mode" aria-label="Switch to light mode" title="Light mode"></button>
+      </div>
+    </div>
+    <nav class="filters" id="filters"></nav>
+  </header>
+
+  <main class="grid" id="grid"></main>
+
+  <div class="view" id="view" hidden>
+    <button class="view-x" id="vx" aria-label="Close">×</button>
+    <button class="view-nav prev" id="vp" aria-label="Previous">‹</button>
+    <div class="view-stage" id="vstage"></div>
+    <aside class="view-side">
+      <p class="view-meta" id="vmeta"></p>
+      <p class="view-cap" id="vcap"></p>
+      <div class="view-acts"><button class="btn" id="vcopy">Copy caption</button><button class="btn primary" id="vdl">Download PNG</button></div>
+      <p class="view-hint">← → to move · Esc to close</p>
+    </aside>
+    <button class="view-nav next" id="vn" aria-label="Next">›</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

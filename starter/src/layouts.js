@@ -11,7 +11,7 @@ export function render(p){
   const L = LAYOUTS[p.layout];
   if (!L) throw new Error(`No layout called "${p.layout}" (post ${p.id}). Layouts: ${Object.keys(LAYOUTS).join(', ')}`);
   const mark = BRAND.style?.mark || 'stroke';
-  return `<article class="post t-${theme(p).name} l-${p.layout} m-${mark}" data-id="${p.id}">${L(p)}</article>`;
+  return `<article class="post t-${theme(p).name} l-${p.layout} m-${mark}" data-id="${p.id}"${p.example ? ' data-example' : ''}>${L(p)}</article>`;
 }
 
 /* ── after layout: shrink every .fit / .fit-w into its box, then draw the strokes ── */

@@ -38,19 +38,23 @@ them for the user to fill.
 A series is one idea told several ways, with its own look, so the grid never repeats itself. 8–15 posts per series;
 mix 2–4 layouts inside a series; vary the colourway post to post (never the same twice running).
 
-| Series | Says | Layouts that fit |
-|---|---|---|
-| Teasers | something is coming, curiosity | hero, mega, statement, photo |
-| Countdown | n days to go | countdown (number huge), mega, ticket |
-| Launch day | we're here, here's how to start | hero, photo, frame, corner |
-| What we do | the products/services | list (icons), split, corner, one service per post with statement |
-| How it works | steps without numbers: icons or pictures per step | list, split, stack |
-| Proof | reviews, results, stats, partners | quote, mega (a stat), swiss |
-| Tips / education | useful on its own, worth saving | tip, statement, swiss |
-| Engagement | answer, vote, tag | quiz, stack, places, statement |
-| Places / audiences | this is for you, specifically | places, photo, frame |
-| Offer | the deal | countdown (the % or price huge), mega, hero |
-| Culture / holidays | we're part of your life | photo, statement, quote |
+Every series draws from **both** big families — the poster family (`po-`, layouts-poster.md) and the campaign family
+(`ca-`, layouts-campaign.md) — with the base family (layouts-base.md) as filler. Alternate them inside a series so
+the feed shows both systems side by side.
+
+| Series | Says | Poster family (`po-`) | Campaign family (`ca-`) | Base |
+|---|---|---|---|---|
+| Teasers | something is coming, curiosity | po-rise, po-mega, po-swiss-bleed, po-stickers | ca-type-hero, ca-statement, ca-photo-full | hero, mega |
+| Countdown | n days to go | po-number, po-numbers, po-glyph | ca-count-big, ca-cd-tile, ca-cd-burst, ca-cd-extrude, ca-cd-window, ca-cd-note, ca-cd-save, ca-count-photo | countdown |
+| Launch day | we're here, here's how to start | po-big, po-release, po-photo-full, po-bands | ca-pass, ca-pass-wide, ca-passport, ca-photo-card | hero, photo |
+| What we do | the products/services | po-corner-pic, po-centre-pic, po-tile, po-swiss-mast | ca-service-list, ca-service | list, corner |
+| How it works | steps without numbers: icons or pictures per step | po-pills, po-row, po-swiss-frame | ca-steps, ca-checklist | list |
+| Proof | reviews, results, stats, partners | po-quote, po-cloud, po-big-line | ca-statement, ca-photo-card | quote, mega |
+| Tips / education | useful on its own, worth saving | po-flat, po-swiss-sandwich, po-word-frame | ca-tip | tip |
+| Engagement | answer, vote, tag | po-ready, po-scatter, po-stickers | ca-poll, ca-quiz, ca-split | quiz, places |
+| Places / audiences | this is for you, specifically | po-photo-round, po-photo-framed, po-half | ca-area, ca-area-classic, ca-areas, ca-landmark, ca-skyline | places, frame |
+| Offer | the deal | po-mega, po-balloon, po-swiss-blocks | ca-cd-photo-bold, ca-cd-remix, ca-ticket | countdown |
+| Culture / holidays | we're part of your life | po-pattern, po-swiss-lines, po-photo-peek | ca-pass-tag, ca-pass-stub, ca-pass-board | photo, statement |
 
 ## 4. Industry playbooks
 

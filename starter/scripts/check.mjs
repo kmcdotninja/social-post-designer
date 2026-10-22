@@ -62,6 +62,23 @@ const problems = await page.evaluate(() => {
   return { out, air: window.__air || [] };
 });
 const { out: list, air } = problems;
+
+// the mix: a set uses both systems, the poster family (po-) and the campaign family (ca-), side by side
+const mix = await page.evaluate(() => [...document.querySelectorAll('.post:not([data-example])')].map(p => {
+  const l = [...p.classList].find(c => c.startsWith('l-')).slice(2);
+  return l.startsWith('po-') ? 'poster' : l.startsWith('ca-') ? 'campaign' : 'base';
+}));
+if (mix.length) {
+  const n = mix.length, count = f => mix.filter(x => x === f).length, pct = f => Math.round(100 * count(f) / n);
+  console.log(`Mix: poster ${pct('poster')}% · campaign ${pct('campaign')}% · base ${pct('base')}% (${n} posts)`);
+  if (n >= 10) {
+    for (const f of ['poster', 'campaign']) if (pct(f) < 30 || pct(f) > 60) list.push(`mix: the ${f} family is ${pct(f)}% of the set; keep each of poster and campaign between 30% and 60%`);
+    if (pct('base') > 20) list.push(`mix: the base family is ${pct('base')}% of the set; keep it to 20% or less`);
+  }
+  let run = 1;
+  for (let i = 1; i < n; i++) { run = mix[i] === mix[i - 1] ? run + 1 : 1; if (run === 3) console.log(`Mix: posts ${i - 1}–${i + 1} are all ${mix[i]}; alternate the families`); }
+  console.log('');
+}
 if (air.length) console.log(`Unfinished-looking (an empty band over 300px; give the idea more size or add the picture):\n${air.join('\n')}\n`);
 console.log(list.length ? list.join('\n') : 'No collisions.');
 console.log(`\n${list.length} problem${list.length === 1 ? '' : 's'}`);

@@ -54,7 +54,13 @@ sources: Unsplash or Pexels with a free API key (`UNSPLASH_ACCESS_KEY`, `PEXELS_
 campaigns.md §5; choose layouts from the catalogues (`references/layouts-*.md`) and the guidance in
 [references/posts.md](references/posts.md). Lean on photos: a set needs image-led posts (full-bleed photo, photo
 cards and frames, photos in numbers and windows), not only type. Vary layouts and colourways so
-no two neighbours look alike. Delete the example posts and the placeholder photo once you have your own.
+no two neighbours look alike.
+
+**Mix the two systems in every set.** The skill holds two complete post systems — the poster family (`po-`) and the
+campaign family (`ca-`) — and a set must use both, side by side, never just one: each takes **30–60%** of the posts
+(the base family can fill up to 20%), every series uses layouts from both (campaigns.md §3 lists them per series),
+and no more than two posts in a row come from the same family. `npm run check` reports the mix and fails a set of
+10 or more posts that leans on one family. Delete the example posts and the placeholder photo once you have your own.
 
 **6. Build, check, look.**
 ```sh
